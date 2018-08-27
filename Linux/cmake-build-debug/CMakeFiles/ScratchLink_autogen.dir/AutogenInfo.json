@@ -1,0 +1,188 @@
+{
+	"BUILD_DIR" : "/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug/ScratchLink_autogen",
+	"CMAKE_BINARY_DIR" : "/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/ascor8522/Documents/scratch-link/Linux",
+	"CMAKE_EXECUTABLE" : "/snap/clion/114/bin/cmake/linux/bin/cmake",
+	"CMAKE_SOURCE_DIR" : "/home/ascor8522/Documents/scratch-link/Linux",
+	"HEADERS" : 
+	[
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/controller/ScratchLinkController.h",
+			"MU",
+			"KECQXMYYOW/moc_ScratchLinkController.cpp"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/model/ScratchLinkApplication.h",
+			"MU",
+			"VNQA4LF4BW/moc_ScratchLinkApplication.cpp"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/model/ScratchLinkBluetoothClient.h",
+			"MU",
+			"VNQA4LF4BW/moc_ScratchLinkBluetoothClient.cpp"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/model/ScratchLinkProtocolVersion.h",
+			"MU",
+			"VNQA4LF4BW/moc_ScratchLinkProtocolVersion.cpp"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/model/ScratchLinkWebSocketServer.h",
+			"MU",
+			"VNQA4LF4BW/moc_ScratchLinkWebSocketServer.cpp"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/model/json-rpc/JSONRPCMessage.h",
+			"MU",
+			"5XTZDUXBMJ/moc_JSONRPCMessage.cpp"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/model/json-rpc/JSONRPCNotification.h",
+			"MU",
+			"5XTZDUXBMJ/moc_JSONRPCNotification.cpp"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/model/json-rpc/JSONRPCRequest.h",
+			"MU",
+			"5XTZDUXBMJ/moc_JSONRPCRequest.cpp"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/model/json-rpc/JSONRPCResponse.h",
+			"MU",
+			"5XTZDUXBMJ/moc_JSONRPCResponse.cpp"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/view/ScratchLinkTrayIcon.h",
+			"MU",
+			"3JYSCEOBDA/moc_ScratchLinkTrayIcon.cpp"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/view/ScratchLinkTrayIconMenu.h",
+			"MU",
+			"3JYSCEOBDA/moc_ScratchLinkTrayIconMenu.cpp"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/view/ScratchLinkView.h",
+			"MU",
+			"3JYSCEOBDA/moc_ScratchLinkView.cpp"
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug/ScratchLink_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug/ScratchLink_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NETWORK_LIB",
+		"QT_WEBSOCKETS_LIB",
+		"QT_WIDGETS_LIB"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug",
+		"/home/ascor8522/Documents/scratch-link/Linux",
+		"/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug/generated",
+		"/home/ascor8522/Qt/5.12.2/gcc_64/include",
+		"/home/ascor8522/Qt/5.12.2/gcc_64/include/QtWidgets",
+		"/home/ascor8522/Qt/5.12.2/gcc_64/include/QtGui",
+		"/home/ascor8522/Qt/5.12.2/gcc_64/include/QtCore",
+		"/home/ascor8522/Qt/5.12.2/gcc_64/mkspecs/linux-g++",
+		"/home/ascor8522/Qt/5.12.2/gcc_64/include/QtWebSockets",
+		"/home/ascor8522/Qt/5.12.2/gcc_64/include/QtNetwork",
+		"/usr/include",
+		"/usr/include/c++/7",
+		"/usr/include/x86_64-linux-gnu/c++/7",
+		"/usr/include/c++/7/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/7/include",
+		"/usr/local/include",
+		"/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed",
+		"/usr/include/x86_64-linux-gnu"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : true,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/g++",
+		"-dM",
+		"-E",
+		"-c",
+		"/snap/clion/114/bin/cmake/linux/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug/ScratchLink_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug/CMakeFiles/ScratchLink_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/home/ascor8522/Qt/5.12.2/gcc_64/bin/moc",
+	"QT_UIC_EXECUTABLE" : "/home/ascor8522/Qt/5.12.2/gcc_64/bin/uic",
+	"QT_VERSION_MAJOR" : 5,
+	"SETTINGS_FILE" : "/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug/CMakeFiles/ScratchLink_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/controller/ScratchLinkController.cpp",
+			"MU"
+		],
+		[ "/home/ascor8522/Documents/scratch-link/Linux/src/main.cpp", "MU" ],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/model/ScratchLinkApplication.cpp",
+			"MU"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/model/ScratchLinkBluetoothClient.cpp",
+			"MU"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/model/ScratchLinkProtocolVersion.cpp",
+			"MU"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/model/ScratchLinkWebSocketServer.cpp",
+			"MU"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/model/json-rpc/JSONRPCMessage.cpp",
+			"MU"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/model/json-rpc/JSONRPCNotification.cpp",
+			"MU"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/model/json-rpc/JSONRPCRequest.cpp",
+			"MU"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/model/json-rpc/JSONRPCResponse.cpp",
+			"MU"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/view/ScratchLinkTrayIcon.cpp",
+			"MU"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/view/ScratchLinkTrayIconMenu.cpp",
+			"MU"
+		],
+		[
+			"/home/ascor8522/Documents/scratch-link/Linux/src/view/ScratchLinkView.cpp",
+			"MU"
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}

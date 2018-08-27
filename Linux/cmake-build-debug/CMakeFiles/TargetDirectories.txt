@@ -1,0 +1,4 @@
+/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug/CMakeFiles/ScratchLink.dir
+/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug/CMakeFiles/ScratchLink_autogen.dir

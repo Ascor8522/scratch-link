@@ -1,0 +1,22 @@
+{
+	"BUILD_DIR" : "/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug/ScratchLink_autogen",
+	"CMAKE_BINARY_DIR" : "/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/ascor8522/Documents/scratch-link/Linux",
+	"CMAKE_SOURCE_DIR" : "/home/ascor8522/Documents/scratch-link/Linux",
+	"INCLUDE_DIR" : "/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug/ScratchLink_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/ascor8522/Documents/scratch-link/Assets/Linux/PNG/Master 1024x1024.png"
+	],
+	"LOCK_FILE" : "/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug/CMakeFiles/ScratchLink_autogen.dir/AutoRcc_res_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "res" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_res.cpp",
+	"RCC_EXECUTABLE" : "/home/ascor8522/Qt/5.12.2/gcc_64/bin/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/ascor8522/Documents/scratch-link/Linux/cmake-build-debug/CMakeFiles/ScratchLink_autogen.dir/AutoRcc_res_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/ascor8522/Documents/scratch-link/Linux/res.qrc",
+	"VERBOSITY" : 0
+}
