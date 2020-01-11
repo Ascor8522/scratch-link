@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="icon">../Assets/Linux/PNG/Master 1024x1024.png</file>
+    </qresource>
+</RCC>

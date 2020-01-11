@@ -1,0 +1,4 @@
+*build*/
+.idea/
+ScratchLink*/
+CMakeLists.txt.user
