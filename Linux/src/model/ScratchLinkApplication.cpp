@@ -1,9 +1,25 @@
 #include "ScratchLinkApplication.h"
 #include <QSysInfo>
+#include <QtWidgets/QErrorMessage>
 
-ScratchLinkApplication::ScratchLinkApplication() = default;
+ScratchLinkApplication::ScratchLinkApplication()
+	: webSocketServer{ new ScratchLinkWebSocketServer() }
+{
+	webSocketServer->listen(webSocketServer->getAddress(), webSocketServer->getPort());
+	if(!webSocketServer->isListening()) {
+	}
+	QErrorMessage * em{new QErrorMessage()};
+	em->showMessage("TEST");
+	delete em;
 
-ScratchLinkApplication::~ScratchLinkApplication() = default;
+};
+
+ScratchLinkApplication::~ScratchLinkApplication()
+{
+	webSocketServer->close();
+	delete webSocketServer;
+	webSocketServer = nullptr;
+};
 
 QString const& ScratchLinkApplication::getName() const
 {
@@ -17,5 +33,10 @@ QString const& ScratchLinkApplication::getVersion() const
 
 QString ScratchLinkApplication::getFullVersion() const
 {
-	return getName() + " " + getVersion() + " " + QSysInfo::kernelType();
+    return getName() + " " + getVersion() + "\n" + QSysInfo::kernelType();
+}
+
+const ScratchLinkWebSocketServer& ScratchLinkApplication::getWebSocketServer() const
+{
+	return *webSocketServer;
 }

@@ -12,6 +12,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
+find_package(Qt5 COMPONENTS WebSockets REQUIRED)
 
 configure_file(src/Config.h.in ${CMAKE_BINARY_DIR}/generated/Config.h)
 include_directories(${CMAKE_BINARY_DIR}/generated/)
@@ -30,6 +31,6 @@ add_executable(
         src/view/ScratchLinkTrayIcon.h
         src/view/ScratchLinkTrayIconMenu.cpp
         src/view/ScratchLinkTrayIconMenu.h
-)
+        src/model/ScratchLinkWebSocketServer.cpp src/model/ScratchLinkWebSocketServer.h src/model/ScratchLinkBluetoothClient.cpp src/model/ScratchLinkBluetoothClient.h)
 
-target_link_libraries(ScratchLink PRIVATE Qt5::Widgets)
+target_link_libraries(ScratchLink PRIVATE Qt5::Widgets Qt5::WebSockets)

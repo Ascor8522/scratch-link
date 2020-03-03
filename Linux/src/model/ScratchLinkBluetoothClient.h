@@ -1,0 +1,9 @@
+#ifndef _SCRATCHLINKBLUETOOTHCLIENT_H_
+#define _SCRATCHLINKBLUETOOTHCLIENT_H_
+
+class ScratchLinkBluetoothClient
+{
+
+};
+
+#endif //_SCRATCHLINKBLUETOOTHCLIENT_H_

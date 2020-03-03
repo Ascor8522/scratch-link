@@ -1,6 +1,7 @@
 #include "ScratchLinkController.h"
 #include <QApplication>
 #include <QClipboard>
+#include <QtWidgets/QErrorMessage>
 
 ScratchLinkController::ScratchLinkController(const ScratchLinkApplication* const model, const ScratchLinkView* const view)
 	: model{ model }
@@ -27,6 +28,14 @@ ScratchLinkController::ScratchLinkController(const ScratchLinkApplication* const
 		&QAction::triggered,
 		[=] () {
 			QApplication::exit(0);
+		}
+	);
+
+	QObject::connect(
+		&model->getWebSocketServer(),
+		&ScratchLinkWebSocketServer::newConnection,
+		[=] () {
+			qDebug("Connected");
 		}
 	);
 }
