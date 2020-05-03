@@ -3,7 +3,7 @@
 #include <QErrorMessage>
 
 ScratchLinkWebSocketServer::ScratchLinkWebSocketServer()
-	: QWebSocketServer{PROJECT_NAME, QWebSocketServer::NonSecureMode, nullptr}
+	: QWebSocketServer{ PROJECT_NAME, QWebSocketServer::NonSecureMode, nullptr }
 {
 }
 
@@ -17,7 +17,25 @@ const QHostAddress& ScratchLinkWebSocketServer::getAddress() const
 	return address;
 }
 
-const unsigned int ScratchLinkWebSocketServer::getPort() const
+unsigned int ScratchLinkWebSocketServer::getPort() const
 {
 	return port;
+}
+
+QWebSocket* ScratchLinkWebSocketServer::getSocket() const
+{
+	return this->socket;
+}
+
+void ScratchLinkWebSocketServer::setSocket(QWebSocket* const socket)
+{
+	this->socket = socket;
+}
+
+void ScratchLinkWebSocketServer::acceptConnection()
+{
+	QWebSocket * s = this->nextPendingConnection();
+	if(s != nullptr) {
+		this->socket = s;
+	}
 }

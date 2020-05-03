@@ -1,13 +1,20 @@
+#include <src/model/ScratchLinkApplication.h>
 #include "ScratchLinkTrayIconMenu.h"
 
 ScratchLinkTrayIconMenu::ScratchLinkTrayIconMenu()
 	: QMenu(nullptr)
-	, about{ new QAction() }
-	, exit{ new QAction() }
 {
-	this->addAction(about);
+	QAction * a = new QAction();
+	a->setText(ScratchLinkApplication::getFulVersion());
+	this->addAction(a);
+	this->about = a;
+
 	this->addSeparator();
-	this->addAction(exit);
+
+	QAction * b = new QAction();
+	b->setText("Exit");
+	this->addAction(b);
+	this->exit = b;
 }
 
 ScratchLinkTrayIconMenu::~ScratchLinkTrayIconMenu()
@@ -18,12 +25,12 @@ ScratchLinkTrayIconMenu::~ScratchLinkTrayIconMenu()
 	exit = nullptr;
 }
 
-QAction& ScratchLinkTrayIconMenu::getAbout() const
+const QAction* ScratchLinkTrayIconMenu::getAbout() const
 {
-	return *about;
+	return about;
 }
 
-QAction& ScratchLinkTrayIconMenu::getExit() const
+const QAction* ScratchLinkTrayIconMenu::getExit() const
 {
-	return *exit;
+	return exit;
 };

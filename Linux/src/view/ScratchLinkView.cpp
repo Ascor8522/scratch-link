@@ -1,9 +1,7 @@
 #include "ScratchLinkView.h"
 
 ScratchLinkView::ScratchLinkView(const ScratchLinkApplication* const app)
-	: QWidget(nullptr)
-	, app{ app }
-	, trayIcon{ new ScratchLinkTrayIcon() }
+	: QWidget(nullptr), app{ app }, trayIcon{ new ScratchLinkTrayIcon() }
 {
 }
 
@@ -13,12 +11,7 @@ ScratchLinkView::~ScratchLinkView()
 	trayIcon = nullptr;
 }
 
-void ScratchLinkView::setApp(const ScratchLinkApplication* const newApp)
+const ScratchLinkTrayIcon* ScratchLinkView::getScratchLinkTrayIcon() const
 {
-	app = newApp;
-}
-
-ScratchLinkTrayIcon const& ScratchLinkView::getScratchLinkTrayIcon() const
-{
-	return *trayIcon;
+	return trayIcon;
 }

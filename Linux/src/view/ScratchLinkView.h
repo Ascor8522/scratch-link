@@ -11,14 +11,14 @@ class ScratchLinkView : public QWidget
 	Q_OBJECT
 
 	private:
-		const ScratchLinkApplication * app;
+		const ScratchLinkApplication* app;
 		const ScratchLinkTrayIcon* trayIcon;
 
 	public:
 		explicit ScratchLinkView(const ScratchLinkApplication* app);
 		~ScratchLinkView() override;
-		void setApp(const ScratchLinkApplication* newApp);
-		ScratchLinkTrayIcon const& getScratchLinkTrayIcon() const;
+
+		const ScratchLinkTrayIcon* getScratchLinkTrayIcon() const;
 
 };
 #endif // SCRATCHLINKVIEW_H

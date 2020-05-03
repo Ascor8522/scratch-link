@@ -9,12 +9,13 @@ class ScratchLinkTrayIcon : public QSystemTrayIcon
 	Q_OBJECT
 
 	private:
-		ScratchLinkTrayIconMenu* menu;
+		const ScratchLinkTrayIconMenu* menu;
 
 	public:
 		explicit ScratchLinkTrayIcon();
 		~ScratchLinkTrayIcon() override;
-		ScratchLinkTrayIconMenu const& getScratchLinkTrayIconMenu() const;
+
+		const ScratchLinkTrayIconMenu* getScratchLinkTrayIconMenu() const;
 
 };
 

@@ -9,14 +9,15 @@ class ScratchLinkTrayIconMenu : public QMenu
 	Q_OBJECT
 
 	private:
-		QAction* about;
-		QAction* exit;
+		const QAction* about;
+		const QAction* exit;
 
 	public:
 		explicit ScratchLinkTrayIconMenu();
 		~ScratchLinkTrayIconMenu() override;
-		QAction& getAbout() const;
-		QAction& getExit() const;
+
+		const QAction* getAbout() const;
+		const QAction* getExit() const;
 
 };
 

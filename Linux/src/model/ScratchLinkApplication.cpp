@@ -5,38 +5,41 @@
 ScratchLinkApplication::ScratchLinkApplication()
 	: webSocketServer{ new ScratchLinkWebSocketServer() }
 {
-	webSocketServer->listen(webSocketServer->getAddress(), webSocketServer->getPort());
-	if(!webSocketServer->isListening()) {
-	}
-	QErrorMessage * em{new QErrorMessage()};
-	em->showMessage("TEST");
-	delete em;
-
-};
+	this->webSocketServer->listen(webSocketServer->getAddress(), webSocketServer->getPort());
+}
 
 ScratchLinkApplication::~ScratchLinkApplication()
 {
 	webSocketServer->close();
 	delete webSocketServer;
 	webSocketServer = nullptr;
-};
-
-QString const& ScratchLinkApplication::getName() const
-{
-	return name;
 }
 
-QString const& ScratchLinkApplication::getVersion() const
+QString ScratchLinkApplication::getName()
 {
-	return version;
+	return ScratchLinkApplication::name;
 }
 
-QString ScratchLinkApplication::getFullVersion() const
+QString ScratchLinkApplication::getVersion()
 {
-    return getName() + " " + getVersion() + "\n" + QSysInfo::kernelType();
+	return ScratchLinkApplication::version;
 }
 
-const ScratchLinkWebSocketServer& ScratchLinkApplication::getWebSocketServer() const
+QString ScratchLinkApplication::getFulVersion()
 {
-	return *webSocketServer;
+	return ScratchLinkApplication::getName()
+		   + " "
+		   + ScratchLinkApplication::getVersion()
+		   + "\n"
+		   + QSysInfo::kernelType();
+}
+
+const ScratchLinkProtocolVersion* ScratchLinkApplication::getProtocolVersion()
+{
+	return ScratchLinkApplication::protocolVersion;
+}
+
+ScratchLinkWebSocketServer* ScratchLinkApplication::getWebSocketServer() const
+{
+	return this->webSocketServer;
 }

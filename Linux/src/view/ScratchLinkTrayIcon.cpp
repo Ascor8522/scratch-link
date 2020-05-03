@@ -2,12 +2,11 @@
 #include <Config.h>
 
 ScratchLinkTrayIcon::ScratchLinkTrayIcon()
-	: QSystemTrayIcon(nullptr)
-	, menu{ new ScratchLinkTrayIconMenu() }
+	: QSystemTrayIcon(nullptr), menu{ new ScratchLinkTrayIconMenu() }
 {
 	this->setIcon(QIcon(":/icon"));
 	this->setVisible(true);
-	this->setContextMenu(menu);
+	this->setContextMenu((QMenu*) menu);
 	this->setToolTip(PROJECT_NAME);
 }
 
@@ -17,7 +16,7 @@ ScratchLinkTrayIcon::~ScratchLinkTrayIcon()
 	menu = nullptr;
 }
 
-ScratchLinkTrayIconMenu const& ScratchLinkTrayIcon::getScratchLinkTrayIconMenu() const
+const ScratchLinkTrayIconMenu* ScratchLinkTrayIcon::getScratchLinkTrayIconMenu() const
 {
-	return *menu;
+	return menu;
 };

@@ -3,23 +3,33 @@
 
 #include <QString>
 #include <Config.h>
+
 #include "ScratchLinkWebSocketServer.h"
+#include "ScratchLinkProtocolVersion.h"
 
 class ScratchLinkApplication
 {
 
 	private:
-		const QString name = PROJECT_NAME;
-		const QString version = PROJECT_VERSION;
-		ScratchLinkWebSocketServer * webSocketServer;
+		inline static const QString name = PROJECT_NAME;
+		inline static const QString version = PROJECT_VERSION;
+		inline static const ScratchLinkProtocolVersion* protocolVersion = new ScratchLinkProtocolVersion
+			{
+				(unsigned int)PROJECT_VERSION_MAJOR,
+				(unsigned int)PROJECT_VERSION_MINOR
+			};
+		ScratchLinkWebSocketServer* webSocketServer;
 
 	public:
 		explicit ScratchLinkApplication();
 		~ScratchLinkApplication();
-		QString const& getName() const;
-		QString const& getVersion() const;
-		QString getFullVersion() const;
-		const ScratchLinkWebSocketServer& getWebSocketServer() const;
+
+		static QString getName();
+		static QString getVersion();
+		static QString getFulVersion();
+		static const ScratchLinkProtocolVersion* getProtocolVersion();
+
+		ScratchLinkWebSocketServer* getWebSocketServer() const;
 
 };
 

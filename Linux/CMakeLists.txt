@@ -8,11 +8,12 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt5 COMPONENTS WebSockets REQUIRED)
+find_package(Qt5 COMPONENTS Core REQUIRED)
 
 configure_file(src/Config.h.in ${CMAKE_BINARY_DIR}/generated/Config.h)
 include_directories(${CMAKE_BINARY_DIR}/generated/)
@@ -20,17 +21,23 @@ include_directories(${CMAKE_BINARY_DIR}/generated/)
 add_executable(
         ScratchLink
         res.qrc
-        src/main.cpp
         src/controller/ScratchLinkController.cpp
         src/controller/ScratchLinkController.h
+        src/main.cpp
         src/model/ScratchLinkApplication.cpp
         src/model/ScratchLinkApplication.h
-        src/view/ScratchLinkView.cpp
-        src/view/ScratchLinkView.h
+        src/model/ScratchLinkBluetoothClient.cpp
+        src/model/ScratchLinkBluetoothClient.h
+        src/model/ScratchLinkProtocolVersion.cpp
+        src/model/ScratchLinkProtocolVersion.h
+        src/model/ScratchLinkWebSocketServer.cpp
+        src/model/ScratchLinkWebSocketServer.h
         src/view/ScratchLinkTrayIcon.cpp
         src/view/ScratchLinkTrayIcon.h
         src/view/ScratchLinkTrayIconMenu.cpp
         src/view/ScratchLinkTrayIconMenu.h
-        src/model/ScratchLinkWebSocketServer.cpp src/model/ScratchLinkWebSocketServer.h src/model/ScratchLinkBluetoothClient.cpp src/model/ScratchLinkBluetoothClient.h)
+        src/view/ScratchLinkView.cpp
+        src/view/ScratchLinkView.h
+)
 
-target_link_libraries(ScratchLink PRIVATE Qt5::Widgets Qt5::WebSockets)
+target_link_libraries(ScratchLink PRIVATE Qt5::Widgets Qt5::WebSockets Qt5::Core)
